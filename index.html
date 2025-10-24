@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinan Şamil Köylü - Kişisel Web Sitesi</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo" data-text="Sinan Şamil Köylü">Sinan Şamil Köylü</a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkımda</a></li>
+                <li><a href="#projects">Projelerim</a></li>
+                <li><a href="#experience">Deneyimlerim</a></li> 
+                <li><a href="#education">Eğitim</a></li> 
+                <li><a href="Sinan_Samil_Koylu_CV.pdf" target="_blank">CV</a></li> 
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        
+        <canvas id="matrix-canvas"></canvas>
+        
+        <div class="hero-content">
+            <h1>Merhaba, ben Sinan Şamil Köylü</h1>
+            
+            <p class="scramble-wrapper">
+                <span id="scramble-text" data-texts='["Yazılım Mühendisiyim.", "Yazılım Öğrencisiyim."]'></span>
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="cta-button">Projelerim</a>
+                <a href="#experience" class="cta-button">Deneyimlerim</a> 
+                <a href="#education" class="cta-button">Eğitim</a> 
+                <a href="Sinan_Samil_Koylu_CV.pdf" target="_blank" class="cta-button secondary">CV Görüntüle</a> 
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title hidden animate-fade-in">Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-text hidden animate-slide-left">
+                    <p>
+                        Aksaray Üniversitesi Yazılım Mühendisliği 2. sınıf öğrencisiyim. Teknik eğitimime ek olarak, İstanbul Üniversitesi'nde uzaktan Yönetim Bilişim Sistemleri bölümünde de okuyarak hem yazılımın teknik detaylarına hem de iş süreçleri yönetimine hakim olmayı hedefliyorum.
+                    </p>
+                    <p>
+                        Eğitimimle eş zamanlı olarak, yazılım geliştirme yaşam döngüsünün (SDLC) tamamında aktif rol almaya ve teorik bilgimi pratiğe dökmeye odaklanıyorum. Temiz, verimli ve iyi belgelenmiş kodlar yazmak benim için bir önceliktir. Hata ayıklama (debugging), özellik geliştirme ve sistem optimizasyonu gibi teknik görevlerde sorumluluk alarak yüksek kaliteli kod katkıları sağlamaya özen gösteriyorum.
+                    </p>
+                    <p>
+                        Özellikle İHA uçuş kontrol yazılımları ve elektrikli araç sistemleri gibi yenilikçi alanlarda edindiğim deneyimlerle, karmaşık ve kritik sistemler üzerinde çalışmaya büyük bir motivasyon duyuyorum.
+                    </p>
+                </div>
+                <div class="skills-list hidden animate-slide-right">
+                    <h3>Teknik Yeteneklerim</h3>
+                    <ul>
+                        <li>CSharp</li> <li>Python</li> <li>HTML</li> <li>CSS</li> <li>JavaScript</li>
+                        <li>MySQL</li> <li>MSSQL</li> <li>OOP</li> <li>Git</li> <li>Visual Studio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title hidden animate-fade-in">Projelerim</h2>
+            <div class="projects-grid">
+                <article class="project-card hidden animate-fade-in">
+                    <h3>Web Uygulaması - Akıllı Ev Sistemleri</h3>
+                    <p>
+                        HTML, CSS, JavaScript ve SQL kullanılarak geliştirilen, müşteri lisans takibi ve uzaktan sistem yönetimini sağlayan dinamik bir web-tabanlı yönetim paneli.
+                    </p>
+                    <ul class="project-tech">
+                        <li>HTML</li> <li>CSS</li> <li>JavaScript</li> <li>SQL</li>
+                    </ul>
+                </article>
+                <article class="project-card hidden animate-fade-in">
+                    <h3>Windows Forms - MQTT Dosya Gönderici</h3>
+                    <p>
+                        C#, MySQL, MQTT ve JSON teknolojileri kullanılarak tasarlanan, girilen içeriği JSON formatına dönüştürüp MQTT ile mesaj olarak gönderen bir masaüstü uygulaması.
+                    </p>
+                    <ul class="project-tech">
+                        <li>C#</li> <li>MySQL</li> <li>MQTT</li> <li>JSON</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience timeline-section" id="experience">
+        <div class="container">
+            <h2 class="section-title hidden animate-fade-in">Deneyimlerim</h2>
+            <div class="timeline">
+                <div class="timeline-item hidden animate-fade-in">
+                    <div class="timeline-content">
+                        <h3>Yazılım Mühendisi</h3>
+                        <span class="company">Gürman İnovasyon</span>
+                        <span class="date">Ekim 2025 - Günümüz</span>
+                        <p>Elektrikli araç sistemleri (araç kontrol üniteleri, BMS, sürücü arayüzü) için C# ve gömülü sistemler kullanarak yazılım geliştirme.</p>
+                    </div>
+                </div>
+                 <div class="timeline-item hidden animate-fade-in">
+                    <div class="timeline-content">
+                        <h3>Yazılım Mühendisi</h3>
+                        <span class="company">Asena UAV Team</span>
+                        <span class="date">Ekim 2025 - Günümüz</span>
+                        <p>İHA gömülü sistemleri ve uçuş kontrol yazılımları geliştirme, sensör entegrasyonu ve gerçek zamanlı hata ayıklama.</p>
+                    </div>
+                </div>
+                <div class="timeline-item hidden animate-fade-in">
+                    <div class="timeline-content">
+                        <h3>Stajyer Yazılım Mühendisi</h3>
+                        <span class="company">KGK Mühendislik</span>
+                        <span class="date">Haziran 2025 - Ağustos 2025</span>
+                        <p>Yazılım geliştirme yaşam döngüsüne aktif katılım, C# ile temiz kod yazma, hata ayıklama ve özellik geliştirme.</p>
+                    </div>
+                </div>
+                <div class="timeline-item hidden animate-fade-in">
+                    <div class="timeline-content">
+                        <h3>Grafik Tasarım ve Satış Pazarlama</h3>
+                        <span class="company">BS Reklam</span>
+                        <span class="date">Haziran 2020 - Haziran 2025</span>
+                        <p>Tasarım ve üretim döngüsünde (tasarım, baskı öncesi hazırlık, kalite kontrol) aktif rol alma, süreç optimizasyonu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="education timeline-section" id="education">
+        <div class="container">
+            <h2 class="section-title hidden animate-fade-in">Eğitim Hayatım</h2>
+            <div class="timeline">
+                 <div class="timeline-item hidden animate-fade-in">
+                    <div class="timeline-content">
+                        <h3>Yazılım Mühendisliği (Lisans)</h3>
+                        <span class="company">Aksaray Üniversitesi</span>
+                        <span class="date">Eylül 2024 - Günümüz (2. Sınıf)</span>
+                        <p>Mühendislik Fakültesi - Not Ortalaması: 3.17</p>
+                    </div>
+                </div>
+                 <div class="timeline-item hidden animate-fade-in">
+                    <div class="timeline-content">
+                        <h3>Yönetim Bilişim Sistemleri (Lisans)</h3>
+                        <span class="company">İstanbul Üniversitesi</span>
+                        <span class="date">Eylül 2025 - Günümüz (1. Sınıf)</span>
+                        <p>Açık ve Uzaktan Eğitim Fakültesi</p>
+                    </div>
+                </div>
+                <div class="timeline-item hidden animate-fade-in">
+                    <div class="timeline-content">
+                        <h3>Lise</h3>
+                        <span class="company">Bünyan Fen Lisesi</span>
+                        <span class="date">Haziran 2023 - Mezuniyet</span> 
+                        <p>Sayısal Bölüm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title hidden animate-fade-in">İletişim</h2>
+            <div class="contact-content hidden animate-fade-in">
+                
+                <div class="contact-info">
+                    <h3>Doğrudan Ulaşın</h3>
+                    <p>Bana aşağıdaki bilgilerden veya yandaki formu kullanarak ulaşabilirsiniz.</p>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <strong>E-posta:</strong> koylusinansamil@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> <strong>Telefon:</strong> +90 553 886 1486</li>
+                        <li>
+                            <i class="fab fa-linkedin"></i> 
+                            <strong>LinkedIn:</strong> 
+                            <a href="https://linkedin.com/in/sinansamiil" target="_blank" rel="noopener noreferrer">
+                                linkedin.com/in/sinansamiil
+                            </a>
+                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Konum:</strong> Kayseri, Türkiye</li>
+                    </ul>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Veya Formu Doldurun</h3>
+                    <form action="https://formspree.io/f/movkgwko" method="POST">
+                        <div class="form-group">
+                            <label for="name">İsim:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-posta:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesaj:</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="form-button">Mesajı Gönder</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sinan Şamil Köylü. Tüm hakları saklıdır.</p> 
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
