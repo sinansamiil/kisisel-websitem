@@ -161,6 +161,15 @@ header {
     opacity: 0.3;
 }
 
+/* YENİ: Hero Logosu Stili */
+.hero-logo {
+    display: block;
+    margin: 0 auto 2rem auto; /* Üst/Alt otomatik, 2rem alt boşluk, yatayda ortalı */
+    max-width: 350px; /* Logonun maksimum genişliği */
+    width: 100%; /* Mobil için */
+    height: auto; /* En-boy oranını koru */
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -185,18 +194,14 @@ header {
     color: #e50914;
 }
 
-/* YENİ: Ana buton kapsayıcısı tekrar yatay oldu */
 .hero-buttons {
     display: flex;
-    justify-content: center; /* Buton grubunu yatayda ortala */
-    align-items: center; /* Dikeyde hizala (önemli değil ama iyi olur) */
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     margin-top: 2rem;
-    flex-wrap: wrap; /* Küçük ekranda alt satıra geç */
+    flex-wrap: wrap;
 }
-
-/* YENİ: İç satır div'i kaldırıldığı için bu kurala gerek kalmadı */
-/* .hero-buttons-row {...} */
 
 .cta-button {
     display: inline-block;
@@ -218,7 +223,6 @@ header {
 }
 
 .cta-button.secondary {
-    /* YENİ: display:block ve margin:auto kaldırıldı */
     background-color: transparent;
     color: #e50914;
 }
@@ -563,6 +567,16 @@ footer {
     margin-top: auto;
 }
 
+/* YENİ: Footer Logosu Stili */
+.footer-logo {
+    display: block;
+    margin: 0 auto 1.5rem auto; /* Ortala ve alttan boşluk ver */
+    max-width: 150px; /* Daha küçük */
+    width: 100%;
+    height: auto;
+    opacity: 0.7; /* Çok parlamaması için biraz soluk */
+}
+
 footer p {
     color: #888;
     font-size: 0.9rem;
@@ -743,6 +757,16 @@ footer p {
     .logo {
         font-size: 1.5rem;
     }
+    
+    /* YENİ: Mobil Logo Stilleri */
+    .hero-logo {
+        max-width: 250px;
+        margin-bottom: 1rem;
+    }
+    .footer-logo {
+        max-width: 100px;
+    }
+    
     .contact-info li {
         font-size: 1rem;
     }
