@@ -161,13 +161,13 @@ header {
     opacity: 0.3;
 }
 
-/* YENİ: Hero Logosu Stili */
+
 .hero-logo {
     display: block;
-    margin: 0 auto 2rem auto; /* Üst/Alt otomatik, 2rem alt boşluk, yatayda ortalı */
-    max-width: 350px; /* Logonun maksimum genişliği */
-    width: 100%; /* Mobil için */
-    height: auto; /* En-boy oranını koru */
+    margin: 0 auto 2rem auto; 
+    max-width: 350px;
+    width: 100%; 
+    height: auto; 
 }
 
 .hero-content {
@@ -567,14 +567,14 @@ footer {
     margin-top: auto;
 }
 
-/* YENİ: Footer Logosu Stili */
+
 .footer-logo {
     display: block;
-    margin: 0 auto 1.5rem auto; /* Ortala ve alttan boşluk ver */
-    max-width: 150px; /* Daha küçük */
+    margin: 0 auto 1.5rem auto;
+    max-width: 150px;
     width: 100%;
     height: auto;
-    opacity: 0.7; /* Çok parlamaması için biraz soluk */
+    opacity: 0.7; 
 }
 
 footer p {
@@ -631,6 +631,81 @@ footer p {
 .timeline .timeline-item:nth-child(4) { transition-delay: 300ms; }
 .timeline .timeline-item:nth-child(5) { transition-delay: 400ms; }
 .timeline .timeline-item:nth-child(6) { transition-delay: 500ms; }
+
+
+.gallery-section {
+    background-color: #1a1a1a;
+}
+
+
+.slider-container {
+    max-width: 650px; 
+    margin: 2rem auto;
+    position: relative;
+    border: 3px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.slides-wrapper {
+    display: flex; 
+    
+
+    width: 500%; 
+    
+  
+    transition: transform 0.5s ease-in-out; 
+}
+
+
+.slide {
+ 
+    width: 20%; 
+    flex-shrink: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.prev-btn {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next-btn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(229, 9, 20, 0.8);
+}
+
 
 
 @media (max-width: 768px) {
@@ -758,7 +833,7 @@ footer p {
         font-size: 1.5rem;
     }
     
-    /* YENİ: Mobil Logo Stilleri */
+   
     .hero-logo {
         max-width: 250px;
         margin-bottom: 1rem;
