@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function drawMatrix() {
             ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#e50914';
+            ctx.fillStyle = '#ff0000ff';
             ctx.font = font_size + 'px monospace';
             for (let i = 0; i < drops.length; i++) {
                 const text = matrix[Math.floor(Math.random() * matrix.length)];
@@ -193,3 +193,55 @@ prevBtn.addEventListener('click', () => {
 
 
 goToSlide(0);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const githubUsername = 'sinansamiil'; // Senin kullanıcı adın
+    const cardElement = document.getElementById('github-card');
+
+    
+    fetch(`https://api.github.com/users/${githubUsername}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Kullanıcı bulunamadı');
+            }
+            return response.json();
+        })
+        .then(data => {
+           
+            cardElement.innerHTML = `
+                <img src="${data.avatar_url}" alt="${data.name}" class="github-avatar">
+                <div class="github-info">
+                    <h3>${data.name || data.login}</h3>
+                    <p>${data.bio || 'Yazılım Mühendisliği & YBS Öğrencisi'}</p>
+                    
+                    <div class="github-stats">
+                        <div class="github-stat-item">
+                            <span>${data.public_repos}</span>
+                            <small>Repo</small>
+                        </div>
+                        <div class="github-stat-item">
+                            <span>${data.followers}</span>
+                            <small>Takipçi</small>
+                        </div>
+                        <div class="github-stat-item">
+                            <span>${data.following}</span>
+                            <small>Takip</small>
+                        </div>
+                    </div>
+                    
+                    <a href="${data.html_url}" target="_blank" class="github-btn">
+                        <i class="fab fa-github"></i> GitHub Profiline Git
+                    </a>
+                </div>
+            `;
+        })
+        .catch(error => {
+            console.error('GitHub API Hatası:', error);
+            cardElement.innerHTML = `
+                <div style="text-align: center; color: #e50914;">
+                    <p>Veri yüklenirken bir hata oluştu.</p>
+                </div>
+            `;
+        });
+});
