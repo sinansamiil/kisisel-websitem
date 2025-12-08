@@ -49,26 +49,31 @@
         </nav>
     </header>
 
-    <section class="hero" id="home">
+   <section class="hero" id="home">
         
         <canvas id="matrix-canvas"></canvas>
         
-        <div class="hero-content">
+        <div class="hero-content-wrapper">
             
-            <img src="logo.png" alt="Sinan Şamil Köylü Logo" class="hero-logo">
-            
-            <h1>Merhaba, ben Sinan Şamil Köylü</h1>
-            
-            <p class="scramble-wrapper">
-                <span id="scramble-text" data-texts='["Yazılım Mühendisiyim.", "Yazılım Öğrencisiyim."]'></span>
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="#projects" class="cta-button">Projelerim</a>
-                <a href="#experience" class="cta-button">Deneyimlerim</a> 
-                <a href="#education" class="cta-button">Eğitim</a> 
-                <a href="Sinan_Samil_Koylu_CV.pdf" target="_blank" class="cta-button secondary">CV Görüntüle</a> 
+            <div class="hero-left animate-slide-left">
+                <img src="logo.png" alt="Logo" class="hero-big-logo">
             </div>
+
+            <div class="hero-center">
+                <h1>Merhaba, ben <br> <span class="highlight-name">Sinan Şamil Köylü</span></h1>
+                
+                <p class="scramble-wrapper">
+                    <span id="scramble-text" data-texts='["Yazılım Mühendisiyim.", "Yazılım Öğrencisiyim.", "Geliştiriciyim."]'></span>
+                </p>
+            </div>
+
+            <div class="hero-right animate-slide-right">
+                <a href="#projects" class="cta-button large-btn">Projelerim</a>
+                <a href="#experience" class="cta-button large-btn">Deneyimlerim</a> 
+                <a href="#education" class="cta-button large-btn">Eğitim</a> 
+                <a href="Sinan_Samil_Koylu_CV.pdf" target="_blank" class="cta-button large-btn secondary">CV Görüntüle</a> 
+            </div>
+
         </div>
     </section>
 
@@ -101,6 +106,15 @@
     <section class="projects" id="projects">
         <div class="container">
             <h2 class="section-title hidden animate-fade-in">Projelerim</h2>
+            
+            <div class="github-profile-wrapper hidden animate-fade-in">
+                <div class="github-card" id="github-card">
+                    <div class="github-loading">
+                        <i class="fas fa-spinner fa-spin"></i> GitHub Profili Yükleniyor...
+                    </div>
+                </div>
+            </div>
+
             <div class="projects-grid">
                 <article class="project-card hidden animate-fade-in">
                     <h3>Web Uygulaması - Akıllı Ev Sistemleri</h3>
@@ -124,108 +138,93 @@
         </div>
     </section>
 
-    <section class="experience timeline-section" id="experience">
-        <div class="container">
-            <h2 class="section-title hidden animate-fade-in">Deneyimlerim</h2>
-            <div class="timeline">
-                <div class="timeline-item hidden animate-fade-in">
-                    <div class="timeline-content">
-                        <h3>Yazılım Mühendisi</h3>
-                        <span class="company">Gürman İnovasyon</span>
-                        <span class="date">Ekim 2025 - Günümüz</span>
-                        <p>Elektrikli araç sistemleri (araç kontrol üniteleri, BMS, sürücü arayüzü) için C# ve gömülü sistemler kullanarak yazılım geliştirme.</p>
-                    </div>
-                </div>
-                 <div class="timeline-item hidden animate-fade-in">
-                    <div class="timeline-content">
-                        <h3>Yazılım Mühendisi</h3>
-                        <span class="company">Asena UAV Team</span>
-                        <span class="date">Ekim 2025 - Günümüz</span>
-                        <p>İHA gömülü sistemleri ve uçuş kontrol yazılımları geliştirme, sensör entegrasyonu ve gerçek zamanlı hata ayıklama.</p>
-                    </div>
-                </div>
-                <div class="timeline-item hidden animate-fade-in">
-                    <div class="timeline-content">
-                        <h3>Stajyer Yazılım Mühendisi</h3>
-                        <span class="company">KGK Mühendislik</span>
-                        <span class="date">Haziran 2025 - Ağustos 2025</span>
-                        <p>Yazılım geliştirme yaşam döngüsüne aktif katılım, C# ile temiz kod yazma, hata ayıklama ve özellik geliştirme.</p>
-                    </div>
-                </div>
-                <div class="timeline-item hidden animate-fade-in">
-                    <div class="timeline-content">
-                        <h3>Grafik Tasarım ve Satış Pazarlama</h3>
-                        <span class="company">BS Reklam</span>
-                        <span class="date">Haziran 2020 - Haziran 2025</span>
-                        <p>Tasarım ve üretim döngüsünde (tasarım, baskı öncesi hazırlık, kalite kontrol) aktif rol alma, süreç optimizasyonu.</p>
-                    </div>
-                </div>
-            </div>
+    <section class="infinite-gallery">
+        <div class="gallery-track">
+            <div class="gallery-slide"><img src="resim1.jpg" alt="Galeri 1"></div>
+            <div class="gallery-slide"><img src="resim2.jpg" alt="Galeri 2"></div>
+            <div class="gallery-slide"><img src="resim3.jpg" alt="Galeri 3"></div>
+            <div class="gallery-slide"><img src="resim4.jpg" alt="Galeri 4"></div>
+            <div class="gallery-slide"><img src="resim5.jpg" alt="Galeri 5"></div>
+            <div class="gallery-slide"><img src="resim6.jpg" alt="Galeri 6"></div>
+            <div class="gallery-slide"><img src="resim7.jpg" alt="Galeri 7"></div>
+            <div class="gallery-slide"><img src="resim8.jpg" alt="Galeri 8"></div>
+            <div class="gallery-slide"><img src="resim9.jpg" alt="Galeri 9"></div>
+            <div class="gallery-slide"><img src="resim10.jpg" alt="Galeri 10"></div>
+
+            <div class="gallery-slide"><img src="resim1.jpg" alt="Galeri 1"></div>
+            <div class="gallery-slide"><img src="resim2.jpg" alt="Galeri 2"></div>
+            <div class="gallery-slide"><img src="resim3.jpg" alt="Galeri 3"></div>
+            <div class="gallery-slide"><img src="resim4.jpg" alt="Galeri 4"></div>
+            <div class="gallery-slide"><img src="resim5.jpg" alt="Galeri 5"></div>
+            <div class="gallery-slide"><img src="resim6.jpg" alt="Galeri 6"></div>
+            <div class="gallery-slide"><img src="resim7.jpg" alt="Galeri 7"></div>
+            <div class="gallery-slide"><img src="resim8.jpg" alt="Galeri 8"></div>
+            <div class="gallery-slide"><img src="resim9.jpg" alt="Galeri 9"></div>
+            <div class="gallery-slide"><img src="resim10.jpg" alt="Galeri 10"></div>
         </div>
     </section>
-    
-    <section class="education timeline-section" id="education">
-        <div class="container">
-            <h2 class="section-title hidden animate-fade-in">Eğitim Hayatım</h2>
-            <div class="timeline">
-                 <div class="timeline-item hidden animate-fade-in">
-                    <div class="timeline-content">
-                        <h3>Yazılım Mühendisliği (Lisans)</h3>
-                        <span class="company">Aksaray Üniversitesi</span>
-                        <span class="date">Eylül 2024 - Günümüz (2. Sınıf)</span>
-                        <p>Mühendislik Fakültesi - Not Ortalaması: 3.17</p>
-                    </div>
-                </div>
-                 <div class="timeline-item hidden animate-fade-in">
-                    <div class="timeline-content">
-                        <h3>Yönetim Bilişim Sistemleri (Lisans)</h3>
-                        <span class="company">İstanbul Üniversitesi</span>
-                        <span class="date">Eylül 2025 - Günümüz</span>
-                        <p>Açık ve Uzaktan Eğitim Fakültesi</p>
-                    </div>
-                </div>
-                <div class="timeline-item hidden animate-fade-in">
-                    <div class="timeline-content">
-                        <h3>Lise</h3>
-                        <span class="company">Bünyan Fen Lisesi</span>
-                        <span class="date">Mezuniyet</span> 
-                        <p>Sayısal Bölüm</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-   <section class="gallery-section" id="gallery">
-        <div class="container">
-            <h2 class="section-title hidden animate-fade-in">Galeri</h2>
+
+    <section class="split-section" id="experience-education">
+        <div class="container full-width-container">
             
-            <div class="slider-container hidden animate-fade-in">
+            <div class="split-wrapper">
                 
-                <div class="slides-wrapper">
-                
-                    <div class="slide">
-                        <img src="resim1.jpg" alt="Galeri Resim 1">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="resim2.jpg" alt="Galeri Resim 2">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="resim3.jpg" alt="Galeri Resim 3">
-                    </div>
+                <div class="split-col animate-slide-left">
+                    <h2 class="col-title"><i class="fas fa-briefcase"></i> Deneyimlerim</h2>
+                    <div class="timeline-simple">
+                        
+                        <div class="timeline-item-simple">
+                            <span class="date">Ekim 2025 - Günümüz</span>
+                            <h3>Yazılım Mühendisi</h3>
+                            <span class="place">Gürman İnovasyon</span>
+                            <p>Elektrikli araç sistemleri ve gömülü yazılım geliştirme.</p>
+                        </div>
 
-                    <div class="slide">
-                        <img src="resim4.jpg" alt="Galeri Resim 4">
-                    </div>
+                        <div class="timeline-item-simple">
+                            <span class="date">Ekim 2025 - Günümüz</span>
+                            <h3>Yazılım Mühendisi</h3>
+                            <span class="place">Asena UAV Team</span>
+                            <p>İHA uçuş kontrol sistemleri ve sensör entegrasyonu.</p>
+                        </div>
 
-                    <div class="slide">
-                        <img src="resim5.jpg" alt="Galeri Resim 5">
-                    </div>
+                        <div class="timeline-item-simple">
+                            <span class="date">Haziran 2025 - Ağustos 2025</span>
+                            <h3>Stajyer Yazılım Mühendisi</h3>
+                            <span class="place">KGK Mühendislik</span>
+                            <p>C# ile backend geliştirme ve proje yönetimi.</p>
+                        </div>
 
-                </div> <a class="prev-btn">&#10094;</a>
-                <a class="next-btn">&#10095;</a>
+                    </div>
+                </div>
+
+                <div class="split-col animate-slide-right">
+                    <h2 class="col-title"><i class="fas fa-graduation-cap"></i> Eğitim Hayatım</h2>
+                    <div class="timeline-simple">
+                        
+                        <div class="timeline-item-simple">
+                            <span class="date">2024 - Günümüz</span>
+                            <h3>Yazılım Mühendisliği</h3>
+                            <span class="place">Aksaray Üniversitesi</span>
+                            <p>Lisans Eğitimi - 2. Sınıf (3.17 Ort)</p>
+                        </div>
+
+                        <div class="timeline-item-simple">
+                            <span class="date">2025 - Günümüz</span>
+                            <h3>Yönetim Bilişim Sistemleri</h3>
+                            <span class="place">İstanbul Üniversitesi</span>
+                            <p>Lisans Eğitimi - 1. Sınıf</p>
+                        </div>
+
+                        <div class="timeline-item-simple">
+                            <span class="date">2019 - 2023</span>
+                            <h3>Lise Eğitimi</h3>
+                            <span class="place">Bünyan Fen Lisesi</span>
+                            <p>Sayısal Bölüm Mezunu</p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
