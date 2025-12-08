@@ -7,13 +7,14 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Menünün altında kalmaması için */
 }
 
 body {
     background-color: #111;
     color: #f5f5f5;
     line-height: 1.6;
-    overflow-x: hidden; 
+    overflow-x: hidden; /* Yatay taşmayı engelle */
 }
 
 .container {
@@ -42,13 +43,13 @@ section .container {
     text-align: center;
 }
 
-
+/* ==== NAVBAR STİLLERİ ==== */
 header {
     width: 100%;
     position: fixed; 
     top: 0;
     left: 0;
-    z-index: 100; 
+    z-index: 1000; /* Z-index artırıldı */
     background-color: rgba(0, 0, 0, 0.95);
     border-bottom: 1px solid #333; 
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
@@ -56,7 +57,7 @@ header {
 
 .navbar {
     width: 100%; 
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -64,13 +65,14 @@ header {
 }
 
 .logo {
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* Mobilde taşmaması için biraz küçültüldü */
     font-weight: 900; 
     color: #f5f5f5; 
     text-decoration: none; 
     position: relative; 
     transition: color 0.3s ease-out;
     letter-spacing: -1px;
+    z-index: 1001;
 }
 
 .logo::before,
@@ -139,6 +141,7 @@ header {
     transition: transform 0.3s ease;
 }
 
+/* ==== DROPDOWN MENU ==== */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -146,30 +149,51 @@ header {
     left: 0;
     background-color: #111;
     border: 1px solid #333;
-    border-radius: 5px;
-    padding: 0.5rem 0;
-    min-width: 200px; 
+    border-radius: 8px;
+    padding: 0.5rem;
+    min-width: 220px; 
     list-style: none;
-    z-index: 110;
+    z-index: 1100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
 .dropdown-menu li {
     margin: 0;
+    width: 100%;
 }
 
 .dropdown-menu li a {
-    padding: 0.75rem 1.5rem;
-    white-space: nowrap; 
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+.dropdown-menu li:last-child a {
+    margin-bottom: 0;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #e50914;
+    color: #fff;
+    transform: translateX(5px);
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block; 
+    display: block;
+    animation: fadeInMenu 0.3s ease forwards;
 }
 
-.dropdown:hover .dropdown-toggle .fa-chevron-down {
-    transform: rotate(180deg);
+@keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
+/* HAMBURGER MENU */
 .hamburger {
     display: none; 
     flex-direction: column;
@@ -177,6 +201,7 @@ header {
     width: 2rem;
     height: 1.5rem;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .hamburger .line {
@@ -187,15 +212,15 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-
+/* ==== HERO BÖLÜMÜ ==== */
 .hero {
-    height: 100vh; 
+    min-height: 100vh; /* height yerine min-height kullandık, mobilde içerik taşarsa uzasın */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 0 5%; 
+    padding: 100px 5% 50px 5%; /* Üstten pay bıraktık */
 }
 
 #matrix-canvas {
@@ -302,7 +327,7 @@ header {
     border-color: #fff;
 }
 
-
+/* ==== HAKKIMDA ==== */
 .about {
     background-color: #1a1a1a;
 }
@@ -361,7 +386,7 @@ header {
     color: #fff;
 }
 
-
+/* ==== PROJELERİM & GITHUB ==== */
 .projects {
     background-color: #111;
 }
@@ -421,7 +446,7 @@ header {
     margin-top: 0.5rem;
 }
 
-
+/* GITHUB KART STİLLERİ */
 .github-profile-wrapper {
     display: flex;
     justify-content: center;
@@ -518,45 +543,7 @@ header {
 }
 
 
-.infinite-gallery {
-    width: 100%;
-    overflow: hidden; 
-    background-color: #000;
-    padding: 0;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-    white-space: nowrap; 
-}
-
-.gallery-track {
-    display: flex;
-    width: max-content; 
-    animation: scrollGallery 20s linear infinite; 
-}
-
-.gallery-slide {
-    width: 350px; 
-    height: 400px; 
-    margin-right: 15px; 
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.gallery-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    
-}
-
-
-@keyframes scrollGallery {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } 
-}
-
-
+/* ==== YENİ: SPLIT (YAN YANA) DENEYİM & EĞİTİM ==== */
 .split-section {
     padding: 4rem 0;
     background-color: #111;
@@ -594,7 +581,7 @@ header {
     gap: 1rem;
 }
 
-
+/* Basit Timeline Yapısı */
 .timeline-simple {
     border-left: 3px solid #e50914;
     padding-left: 2rem;
@@ -606,7 +593,7 @@ header {
     margin-bottom: 2.5rem;
 }
 
-
+/* Çizginin üzerindeki noktalar */
 .timeline-item-simple::before {
     content: '';
     position: absolute;
@@ -649,6 +636,45 @@ header {
 }
 
 
+/* ==== SONSUZ AKAN GALERİ ==== */
+.infinite-gallery {
+    width: 100%;
+    overflow: hidden; 
+    background-color: #000;
+    padding: 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    white-space: nowrap; 
+}
+
+.gallery-track {
+    display: flex;
+    width: max-content; 
+    animation: scrollGallery 30s linear infinite; /* Süreyi artırdık, daha yavaş dönsün */
+}
+
+.gallery-slide {
+    width: 350px; 
+    height: 400px; 
+    margin-right: 15px; 
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+@keyframes scrollGallery {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+
+/* ==== İLETİŞİM ==== */
 .contact {
     background-color: #111;
 }
@@ -767,7 +793,7 @@ header {
     transform: scale(1.05);
 }
 
-
+/* ==== FOOTER ==== */
 footer {
     background-color: #000;
     padding: 2.5rem 0;
@@ -790,7 +816,7 @@ footer p {
     font-size: 0.9rem;
 }
 
-
+/* ==== GENEL ANİMASYONLAR ==== */
 .hidden {
     opacity: 0;
 }
@@ -825,16 +851,6 @@ footer p {
     transform: translateX(0);
 }
 
-.projects-grid .project-card:nth-child(2) {
-    transition-delay: 200ms;
-}
-.projects-grid .project-card:nth-child(3) {
-    transition-delay: 400ms;
-}
-.projects-grid .project-card:nth-child(4) {
-    transition-delay: 600ms;
-}
-
 @keyframes glitch-anim-1 {
   0% { transform: translate(0); }
   20% { transform: translate(-3px, 3px); }
@@ -859,35 +875,45 @@ footer p {
     100% { transform: translateY(0px); }
 }
 
+/* =========================================
+   ==== RESPONSIVE (MOBİL) AYARLARI ==== 
+   ========================================= */
 
-@media (max-width: 600px) {
-    .github-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem;
-    }
-    .github-info {
+/* Küçük tabletler ve büyük telefonlar */
+@media (max-width: 1024px) {
+    .hero-content-wrapper {
+        flex-direction: column; 
+        padding-top: 50px; 
         text-align: center;
     }
-    .github-stats {
+
+    .hero-left, .hero-center, .hero-right {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Sıralama: Logo üstte, Yazı ortada, Butonlar altta */
+    .hero-left { order: 1; margin-bottom: 1rem; }
+    .hero-center { order: 2; margin-bottom: 2rem; }
+    .hero-right { order: 3; }
+
+    .hero-big-logo { width: 250px; } /* Tablette logo boyutu */
+    
+    .hero-center h1 { font-size: 2.5rem; }
+    .highlight-name { font-size: 3rem; }
+    
+    .hero-right {
+        flex-direction: row; 
+        flex-wrap: wrap;
         justify-content: center;
     }
 }
 
-@media (max-width: 900px) {
-    
-    .split-wrapper {
-        flex-direction: column; 
-        gap: 2rem;
-    }
-    
-    .gallery-slide {
-        width: 250px; 
-        height: 300px; 
-    }
-}
-
+/* Telefonlar (Genel Mobil) */
 @media (max-width: 768px) {
+    
+    /* 1. NAVBAR DÜZENİ */
     .hamburger {
         display: flex;
     }
@@ -898,9 +924,11 @@ footer p {
         width: 100%;
         background-color: #000;
         position: absolute;
-        top: 60px;
+        top: 60px; /* Navbar yüksekliği */
         left: 0;
         text-align: center;
+        padding: 1rem 0;
+        border-bottom: 2px solid #e50914;
     }
 
     .nav-links.active {
@@ -909,89 +937,96 @@ footer p {
 
     .nav-links li {
         margin: 1rem 0;
-    }
-
-    .hamburger.active .line:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.active .line:nth-child(1) {
-        transform: translateY(10px) rotate(45deg);
-    }
-    .hamburger.active .line:nth-child(3) {
-        transform: translateY(-10px) rotate(-45deg);
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-    section {
-        padding: 4rem 0;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-    .about-text, .skills-list {
-        flex-basis: 100%;
-    }
-    .skills-list {
-        margin-top: 2rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-content {
-        flex-direction: column;
-    }
-    .contact-info, .contact-form {
-        flex-basis: 100%;
-    }
-
-    .animate-slide-left,
-    .animate-slide-right {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: all 0.7s ease-out;
-    }
-    .animate-slide-left.show,
-    .animate-slide-right.show {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 1024px) {
-    .hero-content-wrapper {
-        flex-direction: column; 
-        padding-top: 80px; 
-        text-align: center;
-    }
-
-    .hero-left, .hero-center, .hero-right {
-        justify-content: center;
-        align-items: center;
         width: 100%;
     }
 
-    .hero-left { order: 1; margin-bottom: 2rem; }
-    .hero-center { order: 2; margin-bottom: 2rem; }
-    .hero-right { order: 3; }
-
-    .hero-big-logo { width: 200px; } 
-    
-    .hero-center h1 { font-size: 2rem; }
-    .highlight-name { font-size: 2.5rem; }
-    
-    .hero-right {
-        flex-direction: row; 
-        flex-wrap: wrap;
-        justify-content: center;
+    .nav-links a {
+        display: block;
+        width: 100%;
     }
+
+    .dropdown-menu {
+        position: static; /* Mobilde aşağı doğru açılsın */
+        width: 100%;
+        background-color: #1a1a1a;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        display: none; /* JS ile açılacak veya hover */
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block; /* Mobilde de üzerine gelince veya tıklayınca açılır */
+    }
+
+    .hamburger.active .line:nth-child(2) { opacity: 0; }
+    .hamburger.active .line:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .hamburger.active .line:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+
+    /* 2. HERO (GİRİŞ) DÜZENİ */
+    .hero {
+        padding-top: 120px; /* Navbar altından başlasın */
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-content-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-big-logo { 
+        width: 180px; /* Mobilde LOGO GÖRÜNÜR OLSUN DİYE BOYUT */
+        margin-bottom: 1rem;
+        display: block; /* Kesinlikle göster */
+    }
+
+    .hero-center h1 { font-size: 1.8rem; }
+    .highlight-name { font-size: 2.2rem; }
+    .scramble-wrapper { font-size: 1.2rem; min-height: 2rem; }
+
     .cta-button.large-btn {
-        width: auto;
-        padding: 0.8rem 1.5rem;
+        width: 100%; /* Mobilde butonlar tam genişlik */
+        max-width: 300px;
         font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+
+    /* 3. DENEYİM VE EĞİTİM (SPLIT) DÜZENİ */
+    .split-wrapper {
+        flex-direction: column; /* Alt alta dizilsin */
+        gap: 2rem;
+    }
+
+    .col-title { font-size: 1.5rem; }
+
+    /* 4. GÖRÜNMEZLİK SORUNU ÇÖZÜMÜ */
+    /* Mobilde animasyonları beklemeden içeriği göster */
+    .animate-slide-left,
+    .animate-slide-right,
+    .animate-fade-in {
+        opacity: 1 !important;
+        transform: translate(0) !important;
+        filter: blur(0) !important;
+        transition: none !important;
+    }
+
+    /* 5. DİĞER BÖLÜMLER */
+    .about-content, .contact-content, .github-card {
+        flex-direction: column;
+    }
+
+    .about-text, .skills-list, .contact-info, .contact-form, .github-info, .github-stats {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Projeler tek sütun */
+    }
+
+    .gallery-slide {
+        width: 250px; /* Mobilde galeri resim boyutu */
+        height: 300px;
     }
 }
