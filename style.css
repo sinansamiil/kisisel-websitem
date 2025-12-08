@@ -7,14 +7,14 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Menünün altında kalmaması için */
+    scroll-padding-top: 100px; 
 }
 
 body {
     background-color: #111;
     color: #f5f5f5;
     line-height: 1.6;
-    overflow-x: hidden; /* Yatay taşmayı engelle */
+    overflow-x: hidden; 
 }
 
 .container {
@@ -49,7 +49,7 @@ header {
     position: fixed; 
     top: 0;
     left: 0;
-    z-index: 1000; /* Z-index artırıldı */
+    z-index: 1000; 
     background-color: rgba(0, 0, 0, 0.95);
     border-bottom: 1px solid #333; 
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
@@ -65,7 +65,7 @@ header {
 }
 
 .logo {
-    font-size: 1.8rem; /* Mobilde taşmaması için biraz küçültüldü */
+    font-size: 1.8rem; 
     font-weight: 900; 
     color: #f5f5f5; 
     text-decoration: none; 
@@ -214,13 +214,13 @@ header {
 
 /* ==== HERO BÖLÜMÜ ==== */
 .hero {
-    min-height: 100vh; /* height yerine min-height kullandık, mobilde içerik taşarsa uzasın */
+    min-height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 100px 5% 50px 5%; /* Üstten pay bıraktık */
+    padding: 100px 5% 50px 5%; 
 }
 
 #matrix-canvas {
@@ -543,7 +543,7 @@ header {
 }
 
 
-/* ==== YENİ: SPLIT (YAN YANA) DENEYİM & EĞİTİM ==== */
+/* ==== DENEYİM & EĞİTİM ==== */
 .split-section {
     padding: 4rem 0;
     background-color: #111;
@@ -581,7 +581,6 @@ header {
     gap: 1rem;
 }
 
-/* Basit Timeline Yapısı */
 .timeline-simple {
     border-left: 3px solid #e50914;
     padding-left: 2rem;
@@ -593,7 +592,7 @@ header {
     margin-bottom: 2.5rem;
 }
 
-/* Çizginin üzerindeki noktalar */
+
 .timeline-item-simple::before {
     content: '';
     position: absolute;
@@ -650,7 +649,7 @@ header {
 .gallery-track {
     display: flex;
     width: max-content; 
-    animation: scrollGallery 30s linear infinite; /* Süreyi artırdık, daha yavaş dönsün */
+    animation: scrollGallery 30s linear infinite; 
 }
 
 .gallery-slide {
@@ -879,7 +878,6 @@ footer p {
    ==== RESPONSIVE (MOBİL) AYARLARI ==== 
    ========================================= */
 
-/* Küçük tabletler ve büyük telefonlar */
 @media (max-width: 1024px) {
     .hero-content-wrapper {
         flex-direction: column; 
@@ -893,12 +891,11 @@ footer p {
         width: 100%;
     }
 
-    /* Sıralama: Logo üstte, Yazı ortada, Butonlar altta */
     .hero-left { order: 1; margin-bottom: 1rem; }
     .hero-center { order: 2; margin-bottom: 2rem; }
     .hero-right { order: 3; }
 
-    .hero-big-logo { width: 250px; } /* Tablette logo boyutu */
+    .hero-big-logo { width: 250px; } 
     
     .hero-center h1 { font-size: 2.5rem; }
     .highlight-name { font-size: 3rem; }
@@ -910,7 +907,6 @@ footer p {
     }
 }
 
-/* Telefonlar (Genel Mobil) */
 @media (max-width: 768px) {
     
     /* 1. NAVBAR DÜZENİ */
@@ -924,7 +920,7 @@ footer p {
         width: 100%;
         background-color: #000;
         position: absolute;
-        top: 60px; /* Navbar yüksekliği */
+        top: 60px; 
         left: 0;
         text-align: center;
         padding: 1rem 0;
@@ -946,17 +942,17 @@ footer p {
     }
 
     .dropdown-menu {
-        position: static; /* Mobilde aşağı doğru açılsın */
+        position: static; 
         width: 100%;
         background-color: #1a1a1a;
         box-shadow: none;
         border: none;
         padding: 0;
-        display: none; /* JS ile açılacak veya hover */
+        display: none; 
     }
     
     .dropdown:hover .dropdown-menu {
-        display: block; /* Mobilde de üzerine gelince veya tıklayınca açılır */
+        display: block; 
     }
 
     .hamburger.active .line:nth-child(2) { opacity: 0; }
@@ -965,7 +961,7 @@ footer p {
 
     /* 2. HERO (GİRİŞ) DÜZENİ */
     .hero {
-        padding-top: 120px; /* Navbar altından başlasın */
+        padding-top: 120px; 
         height: auto;
         min-height: 100vh;
     }
@@ -976,9 +972,9 @@ footer p {
     }
 
     .hero-big-logo { 
-        width: 180px; /* Mobilde LOGO GÖRÜNÜR OLSUN DİYE BOYUT */
+        width: 180px; 
         margin-bottom: 1rem;
-        display: block; /* Kesinlikle göster */
+        display: block;
     }
 
     .hero-center h1 { font-size: 1.8rem; }
@@ -986,7 +982,7 @@ footer p {
     .scramble-wrapper { font-size: 1.2rem; min-height: 2rem; }
 
     .cta-button.large-btn {
-        width: 100%; /* Mobilde butonlar tam genişlik */
+        width: 100%; 
         max-width: 300px;
         font-size: 1rem;
         padding: 0.8rem 0;
@@ -994,14 +990,12 @@ footer p {
 
     /* 3. DENEYİM VE EĞİTİM (SPLIT) DÜZENİ */
     .split-wrapper {
-        flex-direction: column; /* Alt alta dizilsin */
+        flex-direction: column; 
         gap: 2rem;
     }
 
     .col-title { font-size: 1.5rem; }
-
-    /* 4. GÖRÜNMEZLİK SORUNU ÇÖZÜMÜ */
-    /* Mobilde animasyonları beklemeden içeriği göster */
+    
     .animate-slide-left,
     .animate-slide-right,
     .animate-fade-in {
@@ -1022,11 +1016,11 @@ footer p {
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; /* Projeler tek sütun */
+        grid-template-columns: 1fr; 
     }
 
     .gallery-slide {
-        width: 250px; /* Mobilde galeri resim boyutu */
+        width: 250px; 
         height: 300px;
     }
 }
