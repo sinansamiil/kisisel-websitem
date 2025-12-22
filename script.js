@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // -----------------------------------------------------------
     // ÖNEMLİ: Token'ın burada tanımlı
-    const token = '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'; 
+    const token = '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'; 
     // -----------------------------------------------------------
 
     // Eğer kapsayıcı kutu yoksa dur (Hata verme)
