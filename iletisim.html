@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Sinan Şamil Köylü</title>
+    <link rel="icon" type="image/png" href="LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo" data-text="Sinan Şamil Köylü">Sinan Şamil Köylü</a>
+            <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html#about">Hakkımda</a></li>
+                <li class="dropdown">
+                    <a href="projelerim.html" class="dropdown-toggle">Portfolyo <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#experience-education">Deneyimlerim</a></li>
+                        <li><a href="index.html#experience-education">Eğitim</a></li>
+                        <li><a href="projelerim.html">Projelerim</a></li>
+                    </ul>
+                </li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div style="height: 140px;"></div>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-content animate-fade-in hidden">
+                <div class="contact-info">
+                    <h3>Bana Ulaşın</h3>
+                    <p>Projeleriniz, iş teklifleriniz veya sadece tanışmak için benimle iletişime geçebilirsiniz.</p>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:sinan@example.com">sinan@example.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Konum:</strong> Kayseri, Türkiye</li>
+                        <li><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="#">sinansamilkoylu</a></li>
+                        <li><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="#">sinansamiil</a></li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h3>Mesaj Gönder</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Adınız</label>
+                            <input type="text" placeholder="Adınız Soyadınız">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="Email Adresiniz">
+                        </div>
+                        <div class="form-group">
+                            <label>Mesajınız</label>
+                            <textarea rows="5" placeholder="Mesajınız..."></textarea>
+                        </div>
+                        <button type="submit" class="form-button">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+        <img src="logo.png" alt="Sinan Şamil Köylü Logo" class="footer-logo">
+        <p>&copy; 2025 Sinan Şamil Köylü. Tüm Hakları Saklıdır.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
