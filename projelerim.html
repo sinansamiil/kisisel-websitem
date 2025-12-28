@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim | Sinan Şamil Köylü</title>
+    <link rel="icon" type="image/png" href="LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo" data-text="Sinan Şamil Köylü">Sinan Şamil Köylü</a>
+            <div class="hamburger"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html#about">Hakkımda</a></li>
+                <li class="dropdown">
+                    <a href="projelerim.html" class="dropdown-toggle">Portfolyo <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#experience-education">Deneyimlerim</a></li>
+                        <li><a href="index.html#experience-education">Eğitim</a></li>
+                        <li><a href="projelerim.html">Projelerim</a></li>
+                    </ul>
+                </li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div style="height: 140px;"></div>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projelerim</h2>
+
+            <div class="github-profile-wrapper">
+                <div id="github-content" class="github-card" style="justify-content: center; min-height: 200px;">
+                    <div style="color: #888; text-align: center;">
+                        <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <br>
+                        GitHub Verileri Yükleniyor...
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card hidden">
+                    <h3>Web Uygulaması - Akıllı Ev Sistemleri</h3>
+                    <p>HTML, CSS, JavaScript ve SQL kullanılarak geliştirilen, müşteri lisans takibi ve uzaktan sistem yönetimini sağlayan dinamik bir web-tabanlı yönetim paneli.</p>
+                    <ul class="project-tech">
+                        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>SQL</li>
+                    </ul>
+                </div>
+
+                <div class="project-card hidden">
+                    <h3>Windows Forms - MQTT Dosya Gönderici</h3>
+                    <p>C#, MySQL, MQTT ve JSON teknolojileri kullanılarak tasarlanan, girilen içeriği JSON formatına dönüştürüp MQTT ile mesaj olarak gönderen bir masaüstü uygulaması.</p>
+                    <ul class="project-tech">
+                        <li>C#</li><li>MySQL</li><li>MQTT</li><li>JSON</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+        <img src="logo.png" alt="Sinan Şamil Köylü Logo" class="footer-logo">
+        <p>&copy; 2025 Sinan Şamil Köylü. Tüm Hakları Saklıdır.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
